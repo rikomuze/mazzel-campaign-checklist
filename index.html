@@ -560,7 +560,33 @@
     .muted {
       color: rgba(255,255,255,0.82);
     }
+    .campaign-group {
+      margin-bottom: 22px;
+    }
 
+    .campaign-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .campaign-group-title {
+      margin: 0 0 12px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .campaign-group-note {
+      margin: -4px 0 14px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .card-badge.is-ended {
+      background: #efe4dc;
+      color: #8b5d48;
+    }
     @media (max-width: 920px) {
       .main-grid,
       .save-summary {
@@ -600,7 +626,7 @@
 
       <div class="hero-photo">
         <img src="artist.jpg" alt="MAZZEL アーティスト写真" />
-      </div>
+    
         
       </div>
     </header>
@@ -608,9 +634,11 @@
     <main class="main-grid">
       <section class="panel">
         <div class="panel-inner">
-          <h2 class="section-title">開催中のキャンペーン</h2>
-          <p class="section-note">チェックを入れると進捗と保存画像に反映されます。特典画像はDL期限があることがあるので、保存まで終わったら最後の項目も忘れずに。</p>
-
+          <h2 class="section-title">キャンペーン一覧</h2>
+<p class="section-note">シングルとアルバムのキャンペーンをまとめて管理できます。チェックを入れると進捗と保存画像に反映されます。特典画像はDL期限があることがあるので、保存まで終わったら最後の項目も忘れずに。</p>
+          <div class="campaign-group">
+  <h3 class="campaign-group-title">Get Up And Dance</h3>
+  <p class="campaign-group-note">シングル関連のキャンペーン。現在は終了分も含めて記録用に残しています。</p>
           <article class="campaign-card" data-campaign-name="Pre-save / Pre-add">
             <div class="card-top">
               <h3 class="card-title">Get Up And Dance<br />Apple Music Pre-add / Spotify Pre-save</h3>
@@ -641,6 +669,105 @@
             </div>
             <a class="mini-link" href="https://presave.umusic.com/pspa-mazzel-guad/landing-page" target="_blank" rel="noopener noreferrer">キャンペーン詳細を見る</a>
           </article>
+            </div>
+          <div class="campaign-group">
+  <h3 class="campaign-group-title">Banquet</h3>
+  <p class="campaign-group-note">2nd Album「Banquet」関連のデジタルキャンペーンです。</p>
+
+  <article class="campaign-card" data-campaign-name="Banquet Pre-add / Pre-save">
+    <div class="card-top">
+      <h3 class="card-title">Banquet<br />Apple Music Pre-add / Spotify Pre-save</h3>
+      <span class="card-badge is-ended">終了</span>
+    </div>
+    <div class="card-meta">
+      <span>期限：2026.04.05 23:59</span>
+      <span>特典：「BANQUET BANG」待受け画像</span>
+    </div>
+    <div class="checklist">
+      <div class="check-item">
+        <input type="checkbox" id="banquet-spotify-login" data-kind="action" data-group="banquet-presave" data-label="BanquetをSpotifyでPre-save完了" />
+        <label for="banquet-spotify-login">SpotifyでPre-saveを完了した</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="banquet-apple-login" data-kind="action" data-group="banquet-presave" data-label="BanquetをApple MusicでPre-add完了" />
+        <label for="banquet-apple-login">Apple MusicでPre-addを完了した</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="banquet-presave-either" data-kind="derived" data-label="Banquetのどちらか1つ達成" disabled />
+        <label for="banquet-presave-either">どちらか1つ達成（どちらかでOK）</label>
+      </div>
+      <div class="check-item reward">
+        <input type="checkbox" id="banquet-presave-reward" data-kind="reward" data-label="Banquet Pre-save / Pre-add特典を保存した" />
+        <label for="banquet-presave-reward">特典画像を保存した</label>
+      </div>
+    </div>
+    <a class="mini-link" href="https://presave.umusic.com/pspa-mazzel-banquet" target="_blank" rel="noopener noreferrer">キャンペーン詳細を見る</a>
+  </article>
+
+  <article class="campaign-card" data-campaign-name="Banquet ダウンロード">
+    <div class="card-top">
+      <h3 class="card-title">Banquet ダウンロードキャンペーン</h3>
+      <span class="card-badge">開催中</span>
+    </div>
+    <div class="card-meta">
+      <span>期限：2026.04.13 18:00</span>
+      <span>特典：集合カット（アザー）2枚</span>
+    </div>
+    <div class="checklist">
+      <div class="check-item">
+        <input type="checkbox" id="banquet-download-buy" data-kind="action" data-label="Banquetをダウンロード購入した" />
+        <label for="banquet-download-buy">対象サービスで「Banquet」をダウンロード購入した</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="banquet-download-ss" data-kind="action" data-label="Banquet購入履歴のスクショを用意した" />
+        <label for="banquet-download-ss">購入履歴のスクリーンショットを用意した</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="banquet-download-apply" data-kind="apply" data-label="Banquetダウンロードキャンペーンに応募した" />
+        <label for="banquet-download-apply">応募フォームを送信した</label>
+      </div>
+      <div class="check-item reward">
+        <input type="checkbox" id="banquet-download-reward" data-kind="reward" data-label="Banquetダウンロード特典を保存した" />
+        <label for="banquet-download-reward">特典画像を保存した</label>
+      </div>
+    </div>
+    <a class="mini-link" href="https://www.universal-music.co.jp/mazzel/news/2026-04-01/" target="_blank" rel="noopener noreferrer">公式詳細を見る</a>
+  </article>
+
+  <article class="campaign-card" data-campaign-name="Banquet LINE BGM設定">
+    <div class="card-top">
+      <h3 class="card-title">Banquet LINE BGM設定キャンペーン</h3>
+      <span class="card-badge">開催中</span>
+    </div>
+    <div class="card-meta">
+      <span>期限：2026.04.13 18:00</span>
+      <span>特典：「Get Up And Dance」ソロアー写集合</span>
+    </div>
+    <div class="checklist">
+      <div class="check-item">
+        <input type="checkbox" id="banquet-line-update" data-kind="action" data-label="LINEとLINE MUSICを最新版にした" />
+        <label for="banquet-line-update">LINE と LINE MUSIC を最新版にした</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="banquet-line-bgm" data-kind="action" data-label="対象曲をLINE BGM設定した" />
+        <label for="banquet-line-bgm">「The Voice」「BANQUET BANG」「Get Up And Dance」のいずれかをBGM設定した</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="banquet-line-ss" data-kind="action" data-label="LINE BGM設定画面のスクショを撮った" />
+        <label for="banquet-line-ss">設定画面のスクリーンショットを撮影した</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="banquet-line-apply" data-kind="apply" data-label="Banquet LINE BGM設定キャンペーンに応募した" />
+        <label for="banquet-line-apply">応募フォームを送信した</label>
+      </div>
+      <div class="check-item reward">
+        <input type="checkbox" id="banquet-line-reward" data-kind="reward" data-label="Banquet LINE BGM設定特典を保存した" />
+        <label for="banquet-line-reward">特典画像を保存した</label>
+      </div>
+    </div>
+    <a class="mini-link" href="https://www.universal-music.co.jp/mazzel/news/2026-04-01/" target="_blank" rel="noopener noreferrer">公式詳細を見る</a>
+  </article>
+</div>
 <article class="campaign-card" data-campaign-name="Spotify Canvasシェア">
   <div class="card-top">
     <h3 class="card-title">Spotify Canvasシェアキャンペーン</h3>
@@ -813,9 +940,8 @@
 
           <div class="save-card" id="saveCard">
             <div class="save-brand">MAZZEL</div>
-            <h2 class="save-title">Get Up And Dance</h2>
-            <div class="save-sub">Campaign Checklist</div>
-
+<h2 class="save-title">MAZZEL Campaigns</h2>
+<div class="save-sub">Single & Album Checklist</div>
             <div class="save-photo">
               <img src="artist.jpg" alt="MAZZEL アーティスト写真" />
             </div>
@@ -861,7 +987,7 @@
 
   <script>
     const checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
-    const storageKey = 'mazzel-campaign-checklist-v1';
+   const storageKey = 'mazzel-campaign-checklist-v2';
 
     const progressPercent = document.getElementById('progressPercent');
     const barFill = document.getElementById('barFill');
@@ -908,12 +1034,21 @@
     }
 
     function updateSummary() {
-      // Pre-save either logic
+         // Pre-save either logic
       const spotify = document.getElementById('spotify-login');
       const apple = document.getElementById('apple-login');
       const either = document.getElementById('presave-either');
       if (either) {
         either.checked = (spotify && spotify.checked) || (apple && apple.checked);
+      }
+
+      const banquetSpotify = document.getElementById('banquet-spotify-login');
+      const banquetApple = document.getElementById('banquet-apple-login');
+      const banquetEither = document.getElementById('banquet-presave-either');
+      if (banquetEither) {
+        banquetEither.checked =
+          (banquetSpotify && banquetSpotify.checked) ||
+          (banquetApple && banquetApple.checked);
       }
       const total = checkboxes.length;
       const checked = checkboxes.filter(cb => cb.checked).length;
