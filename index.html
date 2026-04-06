@@ -636,41 +636,182 @@
         <div class="panel-inner">
           <h2 class="section-title">キャンペーン一覧</h2>
 <p class="section-note">シングルとアルバムのキャンペーンをまとめて管理できます。チェックを入れると進捗と保存画像に反映されます。特典画像はDL期限があることがあるので、保存まで終わったら最後の項目も忘れずに。</p>
-          <div class="campaign-group">
+  <div class="campaign-group">
   <h3 class="campaign-group-title">Get Up And Dance</h3>
   <p class="campaign-group-note">シングル関連のキャンペーン。現在は終了分も含めて記録用に残しています。</p>
-          <article class="campaign-card" data-campaign-name="Pre-save / Pre-add">
-            <div class="card-top">
-              <h3 class="card-title">Get Up And Dance<br />Apple Music Pre-add / Spotify Pre-save</h3>
-              <span class="card-badge">終了</span>
-            </div>
-            <div class="card-meta">
-              <span>期限：2026.03.22 23:59</span>
-              <span>特典：集合待受</span>
-            </div>
-            <div class="checklist">
-    
-              <div class="check-item">
-                <input type="checkbox" id="spotify-login" data-kind="action" data-group="presave" data-label="SpotifyでPre-save完了" />
-                <label for="spotify-login">SpotifyでPre-saveを完了した</label>
-              </div>
-              <div class="check-item">
-                <input type="checkbox" id="apple-login" data-kind="action" data-group="presave" data-label="Apple MusicでPre-add完了" />
-                <label for="apple-login">Apple MusicでPre-addを完了した</label>
-              </div>
-              <div class="check-item">
-                <input type="checkbox" id="presave-either" data-kind="derived" data-label="どちらか1つ達成" disabled />
-                <label for="presave-either">どちらか1つ達成（どちらかでOK）</label>
-              </div>
-              <div class="check-item reward">
-                <input type="checkbox" id="presave-reward" data-kind="reward" data-label="Pre-save / Pre-add特典画像を保存" />
-                <label for="presave-reward">特典画像を保存した</label>
-              </div>
-            </div>
-            <a class="mini-link" href="https://presave.umusic.com/pspa-mazzel-guad/landing-page" target="_blank" rel="noopener noreferrer">キャンペーン詳細を見る</a>
-          </article>
-  
-          
+
+  <article class="campaign-card" data-campaign-name="Pre-save / Pre-add">
+    <div class="card-top">
+      <h3 class="card-title">Get Up And Dance<br />Apple Music Pre-add / Spotify Pre-save</h3>
+      <span class="card-badge is-ended">終了</span>
+    </div>
+    <div class="card-meta">
+      <span>期限：2026.03.22 23:59</span>
+      <span>特典：集合待受</span>
+    </div>
+    <div class="checklist">
+      <div class="check-item">
+        <input type="checkbox" id="spotify-login" data-kind="action" data-group="presave" data-label="SpotifyでPre-save完了" />
+        <label for="spotify-login">SpotifyでPre-saveを完了した</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="apple-login" data-kind="action" data-group="presave" data-label="Apple MusicでPre-add完了" />
+        <label for="apple-login">Apple MusicでPre-addを完了した</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="presave-either" data-kind="derived" data-label="どちらか1つ達成" disabled />
+        <label for="presave-either">どちらか1つ達成（どちらかでOK）</label>
+      </div>
+      <div class="check-item reward">
+        <input type="checkbox" id="presave-reward" data-kind="reward" data-label="Pre-save / Pre-add特典画像を保存" />
+        <label for="presave-reward">特典画像を保存した</label>
+      </div>
+    </div>
+    <a class="mini-link" href="https://presave.umusic.com/pspa-mazzel-guad/landing-page" target="_blank" rel="noopener noreferrer">キャンペーン詳細を見る</a>
+  </article>
+
+  <article class="campaign-card" data-campaign-name="Spotify Canvasシェア">
+    <div class="card-top">
+      <h3 class="card-title">Spotify Canvasシェアキャンペーン</h3>
+      <span class="card-badge is-ended">終了</span>
+    </div>
+    <div class="card-meta">
+      <span>3/24 17:00開始</span>
+      <span>メンバーごとに締切あり</span>
+      <span>最終：4/1 18:00</span>
+      <span id="canvasMemberProgress">進捗：0 / 8人</span>
+    </div>
+
+    <div style="font-size:0.85rem; margin-bottom:10px; color:#7b4b35;">
+      ※各メンバーは「次メンバー解禁の17:00」が締切<br>
+      （例：KAIRYU → 3/25 17:00まで）
+    </div>
+
+    <div class="checklist">
+      <div style="font-weight:700;">KAIRYU（〜3/25 17:00）</div>
+      <div class="check-item"><input type="checkbox" id="canvas-kairyu-share" data-kind="action" data-label="KAIRYUシェア"><label>シェア</label></div>
+      <div class="check-item"><input type="checkbox" id="canvas-kairyu-apply" data-kind="apply" data-label="KAIRYU応募"><label>応募</label></div>
+      <div class="check-item reward"><input type="checkbox" id="canvas-kairyu-save" data-kind="reward" data-label="KAIRYU保存"><label>特典保存</label></div>
+
+      <div style="font-weight:700; margin-top:10px;">NAOYA（〜3/26 17:00）</div>
+      <div class="check-item"><input type="checkbox" id="canvas-naoya-share" data-kind="action" data-label="NAOYAシェア"><label>シェア</label></div>
+      <div class="check-item"><input type="checkbox" id="canvas-naoya-apply" data-kind="apply" data-label="NAOYA応募"><label>応募</label></div>
+      <div class="check-item reward"><input type="checkbox" id="canvas-naoya-save" data-kind="reward" data-label="NAOYA保存"><label>特典保存</label></div>
+
+      <div style="font-weight:700; margin-top:10px;">RAN（〜3/27 17:00）</div>
+      <div class="check-item"><input type="checkbox" id="canvas-ran-share" data-kind="action" data-label="RANシェア"><label>シェア</label></div>
+      <div class="check-item"><input type="checkbox" id="canvas-ran-apply" data-kind="apply" data-label="RAN応募"><label>応募</label></div>
+      <div class="check-item reward"><input type="checkbox" id="canvas-ran-save" data-kind="reward" data-label="RAN保存"><label>特典保存</label></div>
+
+      <div style="font-weight:700; margin-top:10px;">SEITO（〜3/28 17:00）</div>
+      <div class="check-item"><input type="checkbox" id="canvas-seito-share" data-kind="action" data-label="SEITOシェア"><label>シェア</label></div>
+      <div class="check-item"><input type="checkbox" id="canvas-seito-apply" data-kind="apply" data-label="SEITO応募"><label>応募</label></div>
+      <div class="check-item reward"><input type="checkbox" id="canvas-seito-save" data-kind="reward" data-label="SEITO保存"><label>特典保存</label></div>
+
+      <div style="font-weight:700; margin-top:10px;">RYUKI（〜3/29 17:00）</div>
+      <div class="check-item"><input type="checkbox" id="canvas-ryuki-share" data-kind="action" data-label="RYUKIシェア"><label>シェア</label></div>
+      <div class="check-item"><input type="checkbox" id="canvas-ryuki-apply" data-kind="apply" data-label="RYUKI応募"><label>応募</label></div>
+      <div class="check-item reward"><input type="checkbox" id="canvas-ryuki-save" data-kind="reward" data-label="RYUKI保存"><label>特典保存</label></div>
+
+      <div style="font-weight:700; margin-top:10px;">TAKUTO（〜3/30 17:00）</div>
+      <div class="check-item"><input type="checkbox" id="canvas-takuto-share" data-kind="action" data-label="TAKUTOシェア"><label>シェア</label></div>
+      <div class="check-item"><input type="checkbox" id="canvas-takuto-apply" data-kind="apply" data-label="TAKUTO応募"><label>応募</label></div>
+      <div class="check-item reward"><input type="checkbox" id="canvas-takuto-save" data-kind="reward" data-label="TAKUTO保存"><label>特典保存</label></div>
+
+      <div style="font-weight:700; margin-top:10px;">HAYATO（〜3/31 17:00）</div>
+      <div class="check-item"><input type="checkbox" id="canvas-hayato-share" data-kind="action" data-label="HAYATOシェア"><label>シェア</label></div>
+      <div class="check-item"><input type="checkbox" id="canvas-hayato-apply" data-kind="apply" data-label="HAYATO応募"><label>応募</label></div>
+      <div class="check-item reward"><input type="checkbox" id="canvas-hayato-save" data-kind="reward" data-label="HAYATO保存"><label>特典保存</label></div>
+
+      <div style="font-weight:700; margin-top:10px;">EIKI（〜4/1 18:00）</div>
+      <div class="check-item"><input type="checkbox" id="canvas-eiki-share" data-kind="action" data-label="EIKIシェア"><label>シェア</label></div>
+      <div class="check-item"><input type="checkbox" id="canvas-eiki-apply" data-kind="apply" data-label="EIKI応募"><label>応募</label></div>
+      <div class="check-item reward"><input type="checkbox" id="canvas-eiki-save" data-kind="reward" data-label="EIKI保存"><label>特典保存</label></div>
+    </div>
+
+    <a class="mini-link" href="https://www.universal-music.co.jp/mazzel/news/2026-03-23/" target="_blank" rel="noopener noreferrer">公式詳細を見る</a>
+  </article>
+
+  <article class="campaign-card" data-campaign-name="単曲ダウンロード">
+    <div class="card-top">
+      <h3 class="card-title">単曲ダウンロードキャンペーン</h3>
+      <span class="card-badge is-ended">終了</span>
+    </div>
+    <div class="card-meta">
+      <span>期限：2026.03.30 18:00</span>
+      <span>特典：メンバーソロ待受</span>
+    </div>
+    <div class="checklist">
+      <div class="check-item">
+        <input type="checkbox" id="download-buy" data-kind="action" data-label="単曲をダウンロード購入した" />
+        <label for="download-buy">対象サービスで単曲をダウンロード購入した</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="download-ss" data-kind="action" data-label="購入画面のスクショを用意した" />
+        <label for="download-ss">購入画面のスクショを用意した</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="download-apply" data-kind="apply" data-label="単曲ダウンロードキャンペーンに応募した" />
+        <label for="download-apply">応募フォームを送信した</label>
+      </div>
+      <div class="check-item reward">
+        <input type="checkbox" id="download-reward" data-kind="reward" data-label="単曲ダウンロード特典を保存した" />
+        <label for="download-reward">特典画像を保存した</label>
+      </div>
+    </div>
+    <a class="mini-link" href="https://www.universal-music.co.jp/mazzel/news/2026-03-23/" target="_blank" rel="noopener noreferrer">公式詳細を見る</a>
+  </article>
+
+  <article class="campaign-card" data-campaign-name="ショート動画投稿">
+    <div class="card-top">
+      <h3 class="card-title">ショート動画投稿キャンペーン</h3>
+      <span class="card-badge is-ended">終了</span>
+    </div>
+    <div class="card-meta">
+      <span>期限：2026.04.03 18:00</span>
+      <span>特典：手書きメッセージ画像</span>
+    </div>
+
+    <div class="checklist">
+      <div class="check-item">
+        <input type="checkbox" id="video-post" data-kind="action" data-label="動画投稿した">
+        <label>TikTok / Reel / Shorts に投稿した</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="video-tag" data-kind="action" data-label="ハッシュタグ付けた">
+        <label>#MAZZEL_GetUpAndDance を付けた</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="video-ss" data-kind="action" data-label="スクショ用意">
+        <label>投稿画面のスクショを用意した</label>
+      </div>
+      <div class="check-item">
+        <input type="checkbox" id="video-apply" data-kind="apply" data-label="動画応募した">
+        <label>応募フォームを送信した</label>
+      </div>
+      <div class="check-item reward">
+        <input type="checkbox" id="video-reward" data-kind="reward" data-label="動画特典保存">
+        <label>特典画像を保存した</label>
+      </div>
+    </div>
+
+    <a class="mini-link" href="https://www.universal-music.co.jp/mazzel/news/2026-03-23/" target="_blank" rel="noopener noreferrer">公式詳細を見る</a>
+  </article>
+</div>
+
+<div class="campaign-group">
+  <h3 class="campaign-group-title">Banquet</h3>
+  <p class="campaign-group-note">2nd Album「Banquet」関連のデジタルキャンペーンです。</p>
+
+  <article class="campaign-card" data-campaign-name="Banquet Pre-add / Pre-save">
+    <div class="card-top">
+      <h3 class="card-title">Banquet<br />Apple Music Pre-add / Spotify Pre-save</h3>
+      <span class="card-badge is-ended">終了</span>
+    </div>
+    <div class="card-meta">
+      <span>期限：2026.04.05 23:59</span>
+      <span>特典：「BANQUET BANG」待受け画像</span>
+    </div>
     <div class="checklist">
       <div class="check-item">
         <input type="checkbox" id="banquet-spotify-login" data-kind="action" data-group="banquet-presave" data-label="BanquetをSpotifyでPre-save完了" />
@@ -756,147 +897,6 @@
     <a class="mini-link" href="https://www.universal-music.co.jp/mazzel/news/2026-04-01/" target="_blank" rel="noopener noreferrer">公式詳細を見る</a>
   </article>
 </div>
-<article class="campaign-card" data-campaign-name="Spotify Canvasシェア">
-  <div class="card-top">
-    <h3 class="card-title">Spotify Canvasシェアキャンペーン</h3>
-    <span class="card-badge">終了</span>
-  </div>
-  <div class="card-meta">
-    <span>3/24 17:00開始</span>
-    <span>メンバーごとに締切あり</span>
-    <span>最終：4/1 18:00</span>
-    <span id="canvasMemberProgress">進捗：0 / 8人</span>
-  </div>
-
-  <div style="font-size:0.85rem; margin-bottom:10px; color:#7b4b35;">
-    ※各メンバーは「次メンバー解禁の17:00」が締切<br>
-    （例：KAIRYU → 3/25 17:00まで）
-  </div>
-
-  <div class="checklist">
-    <div style="font-weight:700;">KAIRYU（〜3/25 17:00）</div>
-    <div class="check-item"><input type="checkbox" id="canvas-kairyu-share" data-kind="action" data-label="KAIRYUシェア"><label>シェア</label></div>
-    <div class="check-item"><input type="checkbox" id="canvas-kairyu-apply" data-kind="apply" data-label="KAIRYU応募"><label>応募</label></div>
-    <div class="check-item reward"><input type="checkbox" id="canvas-kairyu-save" data-kind="reward" data-label="KAIRYU保存"><label>特典保存</label></div>
-
-    <div style="font-weight:700; margin-top:10px;">NAOYA（〜3/26 17:00）</div>
-    <div class="check-item"><input type="checkbox" id="canvas-naoya-share" data-kind="action" data-label="NAOYAシェア"><label>シェア</label></div>
-    <div class="check-item"><input type="checkbox" id="canvas-naoya-apply" data-kind="apply" data-label="NAOYA応募"><label>応募</label></div>
-    <div class="check-item reward"><input type="checkbox" id="canvas-naoya-save" data-kind="reward" data-label="NAOYA保存"><label>特典保存</label></div>
-
-    <div style="font-weight:700; margin-top:10px;">RAN（〜3/27 17:00）</div>
-    <div class="check-item"><input type="checkbox" id="canvas-ran-share" data-kind="action" data-label="RANシェア"><label>シェア</label></div>
-    <div class="check-item"><input type="checkbox" id="canvas-ran-apply" data-kind="apply" data-label="RAN応募"><label>応募</label></div>
-    <div class="check-item reward"><input type="checkbox" id="canvas-ran-save" data-kind="reward" data-label="RAN保存"><label>特典保存</label></div>
-
-    <div style="font-weight:700; margin-top:10px;">SEITO（〜3/28 17:00）</div>
-    <div class="check-item"><input type="checkbox" id="canvas-seito-share" data-kind="action" data-label="SEITOシェア"><label>シェア</label></div>
-    <div class="check-item"><input type="checkbox" id="canvas-seito-apply" data-kind="apply" data-label="SEITO応募"><label>応募</label></div>
-    <div class="check-item reward"><input type="checkbox" id="canvas-seito-save" data-kind="reward" data-label="SEITO保存"><label>特典保存</label></div>
-
-    <div style="font-weight:700; margin-top:10px;">RYUKI（〜3/29 17:00）</div>
-    <div class="check-item"><input type="checkbox" id="canvas-ryuki-share" data-kind="action" data-label="RYUKIシェア"><label>シェア</label></div>
-    <div class="check-item"><input type="checkbox" id="canvas-ryuki-apply" data-kind="apply" data-label="RYUKI応募"><label>応募</label></div>
-    <div class="check-item reward"><input type="checkbox" id="canvas-ryuki-save" data-kind="reward" data-label="RYUKI保存"><label>特典保存</label></div>
-
-    <div style="font-weight:700; margin-top:10px;">TAKUTO（〜3/30 17:00）</div>
-    <div class="check-item"><input type="checkbox" id="canvas-takuto-share" data-kind="action" data-label="TAKUTOシェア"><label>シェア</label></div>
-    <div class="check-item"><input type="checkbox" id="canvas-takuto-apply" data-kind="apply" data-label="TAKUTO応募"><label>応募</label></div>
-    <div class="check-item reward"><input type="checkbox" id="canvas-takuto-save" data-kind="reward" data-label="TAKUTO保存"><label>特典保存</label></div>
-
-    <div style="font-weight:700; margin-top:10px;">HAYATO（〜3/31 17:00）</div>
-    <div class="check-item"><input type="checkbox" id="canvas-hayato-share" data-kind="action" data-label="HAYATOシェア"><label>シェア</label></div>
-    <div class="check-item"><input type="checkbox" id="canvas-hayato-apply" data-kind="apply" data-label="HAYATO応募"><label>応募</label></div>
-    <div class="check-item reward"><input type="checkbox" id="canvas-hayato-save" data-kind="reward" data-label="HAYATO保存"><label>特典保存</label></div>
-
-    <div style="font-weight:700; margin-top:10px;">EIKI（〜4/1 18:00）</div>
-    <div class="check-item"><input type="checkbox" id="canvas-eiki-share" data-kind="action" data-label="EIKIシェア"><label>シェア</label></div>
-    <div class="check-item"><input type="checkbox" id="canvas-eiki-apply" data-kind="apply" data-label="EIKI応募"><label>応募</label></div>
-    <div class="check-item reward"><input type="checkbox" id="canvas-eiki-save" data-kind="reward" data-label="EIKI保存"><label>特典保存</label></div>
-  </div>
-
-  <a class="mini-link" href="https://www.universal-music.co.jp/mazzel/news/2026-03-23/" target="_blank">公式詳細を見る</a>
-</article>
-
-                    <article class="campaign-card" data-campaign-name="単曲ダウンロード">
-            <div class="card-top">
-              <h3 class="card-title">単曲ダウンロードキャンペーン</h3>
-         <span class="card-badge">終了</span>
-            </div>
-          <div class="card-meta">
-  <span>期限：2026.03.30 18:00</span>
-  <span>特典：メンバーソロ待受</span>
-</div>
-            <div class="checklist">
-              <div class="check-item">
-                <input type="checkbox" id="download-buy" data-kind="action" data-label="単曲をダウンロード購入した" />
-                <label for="download-buy">対象サービスで単曲をダウンロード購入した</label>
-              </div>
-              <div class="check-item">
-                <input type="checkbox" id="download-ss" data-kind="action" data-label="購入画面のスクショを用意した" />
-                <label for="download-ss">購入画面のスクショを用意した</label>
-              </div>
-              <div class="check-item">
-                <input type="checkbox" id="download-apply" data-kind="apply" data-label="単曲ダウンロードキャンペーンに応募した" />
-                <label for="download-apply">応募フォームを送信した</label>
-              </div>
-              <div class="check-item reward">
-                <input type="checkbox" id="download-reward" data-kind="reward" data-label="単曲ダウンロード特典を保存した" />
-                <label for="download-reward">特典画像を保存した</label>
-              </div>
-            </div>
-            <a class="mini-link" href="https://www.universal-music.co.jp/mazzel/news/2026-03-23/" target="_blank" rel="noopener noreferrer">公式詳細を見る</a>
-          </article>
-
-         <article class="campaign-card" data-campaign-name="ショート動画投稿">
-  <div class="card-top">
-    <h3 class="card-title">ショート動画投稿キャンペーン</h3>
-    <span class="card-badge">終了</span>
-  </div>
-  <div class="card-meta">
-    <span>期限：2026.04.03 18:00</span>
-    <span>特典：手書きメッセージ画像</span>
-  </div>
-
-  <div class="checklist">
-    <div class="check-item">
-      <input type="checkbox" id="video-post" data-kind="action" data-label="動画投稿した">
-      <label>TikTok / Reel / Shorts に投稿した</label>
-    </div>
-    <div class="check-item">
-      <input type="checkbox" id="video-tag" data-kind="action" data-label="ハッシュタグ付けた">
-      <label>#MAZZEL_GetUpAndDance を付けた</label>
-    </div>
-    <div class="check-item">
-      <input type="checkbox" id="video-ss" data-kind="action" data-label="スクショ用意">
-      <label>投稿画面のスクショを用意した</label>
-    </div>
-    <div class="check-item">
-      <input type="checkbox" id="video-apply" data-kind="apply" data-label="動画応募した">
-      <label>応募フォームを送信した</label>
-    </div>
-    <div class="check-item reward">
-      <input type="checkbox" id="video-reward" data-kind="reward" data-label="動画特典保存">
-      <label>特典画像を保存した</label>
-    </div>
-  </div>
-<div class="campaign-group">
-  <h3 class="campaign-group-title">Banquet</h3>
-  <p class="campaign-group-note">2nd Album「Banquet」関連のデジタルキャンペーンです。</p>
-
-  <article class="campaign-card" data-campaign-name="Banquet Pre-add / Pre-save">
-    <div class="card-top">
-      <h3 class="card-title">Banquet<br />Apple Music Pre-add / Spotify Pre-save</h3>
-      <span class="card-badge is-ended">終了</span>
-    </div>
-    <div class="card-meta">
-      <span>期限：2026.04.05 23:59</span>
-      <span>特典：「BANQUET BANG」待受け画像</span>
-    </div>
-  <a class="mini-link" href="https://www.universal-music.co.jp/mazzel/news/2026-03-23/" target="_blank">公式詳細を見る</a>
-</article>
-        </div>
-      </section>
 
       <aside class="panel">
         <div class="panel-inner">
